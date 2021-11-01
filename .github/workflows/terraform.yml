@@ -1,11 +1,13 @@
 # This is the workflow to  get started with Actions
-name: "Terraform-WorkMotion-APIGW-Lambda"
+name: 'Terraform-WorkMotion-APIGW-Lambda'
 
 on:
   push:
     branches:
       - main
   pull_request:
+    branches:
+      - main
 
 jobs:
   # Creating Terraform job with name "Terraform" with various steps also setting up the defaults and env variables
@@ -29,25 +31,26 @@ jobs:
       - name: HashiCorp - Setup Terraform
         uses: hashicorp/setup-terraform@v1.2.1
       # Format Terraform
-      - name: terraform-fmt
+      - name: Terraform Format
         id: fmt
-        run: terraform fmt
+        run: terraform fmt -check
         continue-on-error: true
       # Initiate Terraform
       - name: Terraform Init
         id: init
         run: terraform init
       # Validate Terraform
-      - name: terraform-validate
+      - name: Terraform Validate
         id: validate
         run: terraform validate -no-color
       # Plan Terraform
       - name: Terraform Plan
         id: plan
-       # if: github.event_name == 'pull_request'
+        if: github.event_name == 'pull_request'
         run: terraform plan -no-color
       # update pull request
-      - uses: actions/github-script@0.9.0
+      - name: Update Pull Request
+        uses: actions/github-script@0.9.0
         if: github.event_name == 'pull_request'
         env:
           PLAN: "terraform\n${{ steps.plan.outputs.stdout }}"
@@ -67,7 +70,7 @@ jobs:
 
             </details>
 
-            *Pusher: @${{ github.actor }}, Action: \`${{ github.event_name }}\`, Working Directory: \`${{ env.tf_actions_working_dir }}\`, Workflow: \`${{ github.workflow }}\`*`;
+            *Pusher: @${{ github.actor }}, Action: \`${{ github.event_name }}\`
 
             github.issues.createComment({
               issue_number: context.issue.number,
@@ -77,7 +80,6 @@ jobs:
             })
       # check the plan status if it fails exit from the job
       - name: Terraform Plan Status
-        id: plan_status
         if: steps.plan.outcome == 'failure'
         run: exit 1
       # Apply Terraform in AWS cloud
