@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cee393ce-9916-4320-83f1-c5fb6b335703" name="Changes" comment="Rename Terraform.yml">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="cee393ce-9916-4320-83f1-c5fb6b335703" name="Changes" comment="update Terraform.yml">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/terraform.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/terraform.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +104,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635738997328</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="update Terraform.yml">
+      <created>1635740076351</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1635740076351</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -122,6 +129,7 @@
     <MESSAGE value="APIGW LAMBDA TERRAFORM check-in" />
     <MESSAGE value="Change log message to trigger pull request to trigger the GITHUB Actions workflow" />
     <MESSAGE value="update .gitignore to ignore the .idea files" />
-    <option name="LAST_COMMIT_MESSAGE" value="update .gitignore to ignore the .idea files" />
+    <MESSAGE value="update Terraform.yml" />
+    <option name="LAST_COMMIT_MESSAGE" value="update Terraform.yml" />
   </component>
 </project>
