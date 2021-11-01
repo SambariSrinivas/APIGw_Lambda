@@ -2,11 +2,10 @@
 name: "Terraform-WorkMotion-APIGW-Lambda"
 
 on:
-  workflow_dispatch
-#on:
-#  push:
-#    branches:
-#      - main
+  push:
+    branches:
+      - main
+  pull_request:
 
 jobs:
   # Creating Terraform job with name "Terraform" with various steps also setting up the defaults and env variables
@@ -45,11 +44,11 @@ jobs:
       # Plan Terraform
       - name: Terraform Plan
         id: plan
-        if: github.event_name == 'push'
+        if: github.event_name == 'pull_request'
         run: terraform plan -no-color
       # update pull request
       - uses: actions/github-script@0.9.0
-        if: github.event_name == 'push'
+        if: github.event_name == 'pull_request'
         env:
           PLAN: "terraform\n${{ steps.plan.outputs.stdout }}"
         with:
