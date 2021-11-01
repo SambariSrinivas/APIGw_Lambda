@@ -2,7 +2,7 @@ import json
 
 
 def lambda_handler(event, context):
-    print('Loading Lambda...')
+    print('Loading Lambda')
     welcome_msg = 'Welcome to our demo API, here are the details of your request'
     print(welcome_msg)
     print(type(event))
