@@ -33,7 +33,7 @@
                 <list>
                   <RecentBranch>
                     <option name="branchName" value="feature1" />
-                    <option name="lastUsedInstant" value="1635742968" />
+                    <option name="lastUsedInstant" value="1635743939" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="test" />
@@ -169,6 +169,7 @@
     <MESSAGE value="Change log message to trigger pull request to trigger the GITHUB Actions workflow" />
     <MESSAGE value="update .gitignore to ignore the .idea files" />
     <MESSAGE value="update Terraform.yml" />
-    <option name="LAST_COMMIT_MESSAGE" value="update Terraform.yml" />
+    <MESSAGE value="Inital Commit feature branch" />
+    <option name="LAST_COMMIT_MESSAGE" value="Inital Commit feature branch" />
   </component>
 </project>
