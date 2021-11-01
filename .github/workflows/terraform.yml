@@ -2,7 +2,7 @@
 name: "Terraform-WorkMotion-APIGW-Lambda"
 
 on:
-  pull_request:
+  push:
     branches:
       - main
 
@@ -43,11 +43,11 @@ jobs:
       # Plan Terraform
       - name: Terraform Plan
         id: plan
-        if: github.event_name == 'pull_request'
+        if: github.event_name == 'push'
         run: terraform plan -no-color
       # update pull request
       - uses: actions/github-script@0.9.0
-        if: github.event_name == 'pull_request'
+        if: github.event_name == 'push'
         env:
           PLAN: "terraform\n${{ steps.plan.outputs.stdout }}"
         with:
@@ -81,5 +81,5 @@ jobs:
         run: exit 1
       # Apply Terraform in AWS cloud
       - name: Terraform Apply
-        if: github.ref == 'refs/heads/main' && github.event_name == 'pull_request'
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
         run: terraform apply -auto-approve
