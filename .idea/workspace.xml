@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cee393ce-9916-4320-83f1-c5fb6b335703" name="Changes" comment="Initial Commit feature branch">
+    <list default="true" id="cee393ce-9916-4320-83f1-c5fb6b335703" name="Changes" comment="Updating terraform.yml file">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/New_terraform.yml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.github/workflows/terraform.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/terraform.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -18,7 +19,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feature1" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -165,7 +166,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635743967117</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Updating terraform.yml file">
+      <created>1635744411450</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1635744411450</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -185,6 +193,7 @@
     <MESSAGE value="update .gitignore to ignore the .idea files" />
     <MESSAGE value="update Terraform.yml" />
     <MESSAGE value="Inital Commit feature branch" />
-    <option name="LAST_COMMIT_MESSAGE" value="Inital Commit feature branch" />
+    <MESSAGE value="Updating terraform.yml file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updating terraform.yml file" />
   </component>
 </project>

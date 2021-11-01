@@ -4,10 +4,10 @@ name: 'Terraform-WorkMotion-APIGW-Lambda'
 on:
   push:
     branches:
-      - main
+      - master
   pull_request:
     branches:
-      - main
+      - master
 
 jobs:
   # Creating Terraform job with name "Terraform" with various steps also setting up the defaults and env variables
@@ -84,5 +84,5 @@ jobs:
         run: exit 1
       # Apply Terraform in AWS cloud
       - name: Terraform Apply
-        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        if: github.ref == 'refs/heads/master' && github.event_name == 'push'
         run: terraform apply -auto-approve
